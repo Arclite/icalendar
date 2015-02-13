@@ -1,14 +1,16 @@
-(ns icalendar.core)
+(ns icalendar.core
+  (:require [icalendar.event :as event]))
+
+(defn events->string [events]
+  (clojure.string/join "\n" (map event/to-string events)))
 
 (defn product-id [name]
-  (str "PRODID:-//" name "//NONSGML 1.0//EN\n"))
+  (str "PRODID:-//" name "//NONSGML 1.0//EN"))
 
-(def calendar-header
-  (str "BEGIN:VCALENDAR\nVERSION:2.0\n"))
-
-(def calendar-footer
-  (str "END:VCALENDAR"))
-
-(defn calendar [name]
-  (str calendar-header (product-id name) calendar-footer))
+(defn calendar [name events]
+  (str "BEGIN:VCALENDAR\n"
+       "VERSION:2.0\n"
+       (product-id name) "\n"
+       (events->string events) "\n"
+       "END:VCALENDAR"))
 

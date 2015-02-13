@@ -8,7 +8,7 @@
 (defn format-time [t]
   (tf/unparse time-formatter t))
 
-(defn event-string [e]
+(defn to-string [e]
   (str "BEGIN:VEVENT\n"
        "DTSTAMP:" (format-time (:timestamp e)) "\n"
        "DTSTART:" (format-time (:start e)) "\n"
