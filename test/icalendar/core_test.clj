@@ -3,9 +3,9 @@
             [icalendar.core :refer :all]
             [clj-time.core :as t]))
 
-(def test-event {:timestamp (t/date-time 2015 6 1 19)
-                 :start (t/date-time 2015 6 1 19)
-                 :end (t/date-time 2015 6 1 21)})
+(def test-event {:dtstamp (t/date-time 2015 6 1 19)
+                 :dtstart (t/date-time 2015 6 1 19)
+                 :dtend (t/date-time 2015 6 1 21)})
 
 (deftest test-prodid
   (testing "product id"

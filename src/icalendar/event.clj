@@ -10,7 +10,7 @@
 
 (defn to-string [e]
   (str "BEGIN:VEVENT\n"
-       "DTSTAMP:" (format-time (:timestamp e)) "\n"
-       "DTSTART:" (format-time (:start e)) "\n"
-       "DTEND:" (format-time (:end e)) "\n"
+       "DTSTAMP:" (format-time (:dtstamp e)) "\n"
+       "DTSTART:" (format-time (:dtstart e)) "\n"
+       "DTEND:" (format-time (:dtend e)) "\n"
        "END:VEVENT"))
