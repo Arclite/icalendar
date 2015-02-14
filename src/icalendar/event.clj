@@ -11,6 +11,7 @@
 (defn to-string [e]
   (str "BEGIN:VEVENT\n"
        "DTSTAMP:" (format-time (:dtstamp e)) "\n"
+       "UID:" (:uid e) "\n"
        "DTSTART:" (format-time (:dtstart e)) "\n"
        "DTEND:" (format-time (:dtend e)) "\n"
        "END:VEVENT"))
