@@ -8,6 +8,6 @@
    :start (t/date-time 2015 6 1 19)
    :end (t/date-time 2015 6 1 21)})
 
-(deftest format
+(deftest date-format-test
   (testing "formatting"
     (is (= (format-time (:timestamp test-event)) "20150601T190000Z"))))
