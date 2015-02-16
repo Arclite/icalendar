@@ -1,4 +1,4 @@
-(defproject icalendar "0.1.0-SNAPSHOT"
+(defproject icalendar "0.1.0"
   :description "A Clojure library for creating iCalendar files."
   :url "http://github.com/Arclite/icalendar"
   :license {:name "Eclipse Public License"
