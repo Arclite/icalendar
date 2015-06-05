@@ -8,7 +8,7 @@
 (defn format-time [t]
   (tf/unparse time-formatter t))
 
-(defrecord Event [dtstamp uid dtstart dtend]
+(defrecord Event [dtstamp uid dtstart dtend summary]
   Component
   (export [c]
     (str "BEGIN:VEVENT\n"
@@ -16,5 +16,6 @@
          "UID:" uid "\n"
          "DTSTART:" (format-time dtstart) "\n"
          "DTEND:" (format-time dtend) "\n"
+         "SUMMARY:" summary "\n"
          "END:VEVENT")))
 
