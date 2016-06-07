@@ -4,7 +4,7 @@ A Clojure library designed to write iCalendar files.
 
 ## Usage
 
-TBD
+Do not use this.
 
 ## License
 
